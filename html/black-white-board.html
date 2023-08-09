@@ -1,17 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="ncss/bwb.css">
-    <link rel="stylesheet" href="njs/bwb.js">
     <title>黑白棋</title>
 </head>
+
 <body>
-    <div class="score_left"><p>玩家分数：</p></div>
-    <div class="score_right"><p>对手分数：</p></div>
-    <div class="board">
-        <p class="chess"></p>
+    <div class="score_left">
+        <div id="score_A">玩家分数:</div>
+        <div id="state_A">状态:</div>
+        <div id="time_A">时间:</div>
     </div>
+    <div class="score_right">
+        <div id="score_B">玩家分数:</div>
+        <div id="state_B">状态:</div>
+        <div id="time_B">时间:</div>
+    </div>
+    <div id="board">
+        <table id="tab">
+            <tr>
+                <td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td>
+            </tr>
+            <tr>
+                <td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td>
+            </tr>
+            <tr>
+                <td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td>
+            </tr>
+            <tr>
+                <td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td>
+            </tr>
+            <tr>
+                <td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td>
+            </tr>
+            <tr>
+                <td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td>
+            </tr>
+            <tr>
+                <td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td>
+            </tr>
+            <tr>
+                <td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td>
+            </tr>
+            <tr>
+                <td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td>
+            </tr>
+            <tr>
+                <td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td>
+            </tr>
+            <tr>
+                <td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td>
+            </tr>
+            <tr>
+                <td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td><td id="" background="" data-row="" data-col=""></td>
+            </tr>
+        </table>
+    </div>
+    <div id="second_layer">
+        <div id="menu">
+            <div id="challenge"><input type="radio" name="challenge">困难</div>
+            <div id="challenge"><input type="radio" name="challenge">中等</div>
+            <div id="challenge"><input type="radio" name="challenge">简单</div>
+            <div id="close"><button id="menu_close_button" onclick="menu_close()">确定</button></div>
+        </div>
+        <div id="menu2">
+            <div id="black"><input type="radio" name="chess" value="black"><p></p></div>
+            <div id="white"><input type="radio" name="chess" value="white"><p></p></div>
+            <div id="close"><button id="menu2_close_button" onclick="menu2_close()">确定</button></div>
+        </div>
+    </div>
+    <div  id="startButton"><button id="button" onclick="startgame()">开始游戏</button></div>
+    <script type="text/javascript" src="njs/bwb.js"></script>
 </body>
 </html>

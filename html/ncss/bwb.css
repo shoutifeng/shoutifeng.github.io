@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -7,55 +7,218 @@ body {
     padding: auto;
     margin: auto;
     background-image: url("../../images/bwb.jpg");
-    background-size: cover ;
-    background-attachment: fixed ;
+    background-size: cover;
+    background-attachment: fixed;
     background-position: center center;
 }
 
 .score_left {
     position: relative;
     float: left;
-    width: 150px;
-    height: 39px;
+    width: 200px;
+    height: 200px;
     margin-top: 100px;
     margin-left: 100px;
-    background-image: url("../../images/score.png");
-    background-size: cover;
 }
 
-.score_left p {
+
+.score_left div{
+    width: 150px;
+    height: 39px;
+    margin: auto;
+    margin-top: 20px;
+    background-image: url("../../images/score.png");
+    background-size: cover;
     text-align: center;
     line-height: 39px;
+    font-weight: bolder;
 }
+
+
+
 .score_right {
     position: relative;
     float: right;
-    width: 150px;
-    height: 39px;
+    width: 200px;
+    height: 200px;
     margin-top: 100px;
     margin-right: 100px;
+}
+
+
+.score_right div{
+    width: 150px;
+    height: 39px;
+    margin: auto;
+    margin-top: 20px;
     background-image: url("../../images/score.png");
     background-size: cover;
-}
-
-.score_right p {
     text-align: center;
     line-height: 39px;
+    font-weight: bolder;
 }
 
-.board {
+#board {
     position: relative;
     width: 600px;
-    height: 522px;
+    height: 600px;
     margin: auto;
-    margin-top: 200px;
+    margin-top: 150px;
+    background: no-repeat;
     background-image: url("../../images/board.png");
+    border-radius: 10px;
 }
 
-.board p {
-    position: relative;
-    width: 45px;
-    height: 45px;
-    background-image: url("../../images/black2.png");
+#board table tr td {
+    height: 31px;
+    width: 20px;
+    padding: 15px;
+    padding-top: 12px;
+    padding-bottom: 5px;
+    background-repeat: no-repeat;
     background-size: cover;
+}
+
+#startButton {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 120px;
+    height: 50px;
+}
+
+#startButton button {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #d2b2dc, #dd91cf, #a2a2c0);
+    border-radius: 10px;
+}
+
+#second_layer {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#menu {
+    display: none;
+    position: absolute;
+    width: 200px;
+    height: 280px;
+    border-radius: 10px;
+    background-color: #bfb7bd;
+    top: 50%;
+    /* 上边距设置为50%，使菜单内容向下偏移一半高度 */
+    left: 50%;
+    /* 左边距设置为50%，使菜单内容向右偏移一半宽度 */
+    transform: translate(-50%, -50%);
+    /* 使用transform属性来修正偏移 */
+}
+
+#menu2 {
+    display: none;
+    position: absolute;
+    width: 200px;
+    height: 280px;
+    border-radius: 10px;
+    background-color: #bfb7bd;
+    top: 50%;
+    /* 上边距设置为50%，使菜单内容向下偏移一半高度 */
+    left: 50%;
+    /* 左边距设置为50%，使菜单内容向右偏移一半宽度 */
+    transform: translate(-50%, -50%);
+    /* 使用transform属性来修正偏移 */
+}
+
+
+#menu #challenge {
+    width: 100px;
+    height: 35px;
+    margin: auto;
+    margin-top: 30px;
+    background-color: #c99dcf;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 5px;
+}
+
+#menu #close {
+    position: relative;
+    width: 80px;
+    height: 28px;
+    margin: 0 auto;
+    margin-top: 20px;
+    /* background-color: rgb(184, 219, 219); */
+    /* text-align: center;
+    line-height: 28px;
+    border-radius: 30px; */
+}
+
+#menu_close_button {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(184, 219, 219);
+    border-radius: 30px;
+}
+
+#menu2 #black {
+    width: 80px;
+    height: 50px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+#menu2 #black input {
+    width: 15px;
+    height: 15px;
+}
+#menu2 #black p{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    background-image: url("../images/black2.png");
+    background-size: cover;
+}
+#menu2 #white {
+    width: 80px;
+    height: 50px;
+    margin: auto;
+    margin-top: 30px;
+}
+#menu2 #white input {
+    width: 15px;
+    height: 15px;
+}
+
+#menu2 #white p{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    background-image: url("../images/white2.png");
+    background-size: cover;
+}
+
+#menu2 #close {
+    position: relative;
+    width: 80px;
+    height: 28px;
+    margin: 0 auto;
+    margin-top: 40px;
+    /* background-color: rgb(184, 219, 219); */
+    /* text-align: center;
+    line-height: 28px;
+    border-radius: 30px; */
+}
+
+#menu2_close_button {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(184, 219, 219);
+    border-radius: 30px;
 }
